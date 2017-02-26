@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../psk3-view1/psk3-view1.html">
+
+<dom-module id="psk3-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]</h2>
+    <psk3-view1></psk3-view1>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'psk3-app',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'psk3-app',
+        },
+      },
+
+      foo: function() {
+        console.log(`hello world ${this.prop1}`);
+      }
+    });
+  </script>
+</dom-module>

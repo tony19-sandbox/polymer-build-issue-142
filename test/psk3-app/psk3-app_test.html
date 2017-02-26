@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>psk3-app test</title>
+
+    <script src="../../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../../src/psk3-app/psk3-app.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <psk3-app></psk3-app>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('psk3-app', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'psk3-app');
+        });
+      });
+    </script>
+  </body>
+</html>
